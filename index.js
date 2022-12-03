@@ -40,3 +40,4 @@ pokemons.map(pokemon => {
 //     const newELM = addElement(pokemons[i]);
 //     contenair.appendChild(newELM)
 // }
+console.log("test")
