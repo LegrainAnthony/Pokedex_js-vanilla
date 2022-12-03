@@ -1,53 +1,26 @@
-/*
-git status : sert a voir les fichier modifier
+const pokemons = ['pikachu', 'bulbizard', 'poussifeu', 'bulbizar', "tiplouf", 'florentin', 'salameche'];
+const chifres = ['1', '2', '3', '4', "5", '6', '7'];
+// Récupéré la div contenair.
 
-git add . : ajoute tous les fichié à un paquet // crée un packet
+const divContenair = document.querySelector("#contenair");
 
-git commit -m "nom du commit"//a chaque fin de tache a faire (sauvegarde en cas de merde(skyrim)) //nom du packet
+// créer une fonction qui va créer des paragraphe en lui ajoutant du texte.
 
-git push . : envoie le code sur github
-
-*/
-
-/* 
-* j'initie un tableaux avec des pokemons à l'intérieur qui s'apelle pokemons
-* je séléctionne la div dans laquelle je vais vouloir injécté mes pokémons
-*/
-
-const pokemons = ['pikachu', 'bulbizard', 'poussifeu', 'bulbizar', "tiplouf", 'florentin'];
-const contenair = document.querySelector('#contenair');
-
-/* 
-* je déclare une fonction qui va :
-* créer un element html "paragraph"
-* lui ajouter du texte qui sera le paramètre de la fonction
-* inséré ce text à l'intérieur du paragraph
-* puis return le resultat de la variable
-*/
-
-
-function addElement (value) {
-    const newParagraph = document.createElement("p");
-    const newContent = document.createTextNode(value);
-    newParagraph.appendChild(newContent)
-    return newParagraph
+function addParagraphe(value){
+    let newP = document.createElement('p');//crée une balise <p>
+    newP.textContent = value;
+    return newP;
 }
 
-/* 
-* j'appelle mon tableaux "pokemons" et j'utilise une méthode qui s'apelle map (C'est une boucle for fais exprès pour bouclé sur chaques valeurs du tableaux);
-* chaque boucle va créer un nouvelle élément grâce à la fonction en lui passant le nom du pokemon sur laquel map boucle
-* puis va linséré dans notre div contenaire dans le HTML
-*/
+// pour chaque élément du tableaux ajouté le paragraphe au contenaire.
 
+for(let i = 0; i < pokemons.length; i++){
+    let paragraph = addParagraphe(pokemons[i]);
+    paragraph.classList.add('main_title')
+    divContenair.append(paragraph);
+}
 
-pokemons.map(pokemon => {
-    const newELM = addElement(pokemon);
-    contenair.appendChild(newELM)
-})
-
-// l'quivalent en for c'est ça le resultat est le même
-
-// for (i = 0; i < pokemons.length; i++) {
-//     const newELM = addElement(pokemons[i]);
-//     contenair.appendChild(newELM)
-// }
+for(let i = 0; i < chifres.length; i++){
+    let paragraph = addParagraphe(i);
+    divContenair.append(paragraph);
+}
