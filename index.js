@@ -1,5 +1,18 @@
-const contenaire = document.querySelector('#contenair') 
+const divContenair = document.querySelector('#contenair');
+const inputText = document.querySelector('#fetchMax');
+const form = document.querySelector('#form');
 
+function hundleSubmit(event) {
+    event.preventDefault();
+}
+
+function getinputValue(event){
+    fetchPokemon(event.target.value)
+    event.target.value = ''
+}
+
+form.addEventListener('submit', hundleSubmit)
+inputText.addEventListener('change', getinputValue);
 
 function addParagraphe(value){
     let newP = document.createElement('p');
