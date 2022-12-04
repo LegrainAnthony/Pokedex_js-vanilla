@@ -4,7 +4,13 @@ function hundleSubmit(event) {
     event.preventDefault();
 }
 
-function addNewCard () {
+function addLink () {
+    let newLink = document.createElement('a');
+    return newLink
+}
+
+
+function addNewDiv () {
     let newDiv = document.createElement('div');
     return newDiv
 }
@@ -27,20 +33,41 @@ function fetchPokemon () {
     .then((response) => response.json())
     .then((data) => {
         data.results.map(pokemon => {
-            
             fetch(pokemon.url)
             .then((response) => response.json())
             .then((data) => {
-                
-                
-                let newDiv = addNewCard();
+
+                let link = addLink();
+                link.href=pokemon.url;
+                link.classList.add('link__color')
+
+                let newDiv = addNewDiv();
+
                 let paragraph = addParagraphe(pokemon.name);
+                paragraph.classList.add('main__card__title');
+
                 let image = addImage(data.sprites.front_default);
+                image.classList.add('main__card__image');
+
+                let divTypeContenair = addNewDiv();
+                divTypeContenair.classList.add('main__contenair__type');
+
+                data.types.map(typeOfPokemon =>{
+                    console.log(typeOfPokemon);
+                    let pokeType = addParagraphe(typeOfPokemon.type.name);
+                    pokeType.classList.add(`${typeOfPokemon.type.name}_color`);
+                    
+                    divTypeContenair.append(pokeType)
+                })
                 
-                newDiv.append(paragraph);
+
                 newDiv.append(image);
+                newDiv.append(paragraph);
+                newDiv.append(divTypeContenair);
                 newDiv.classList.add("main__card_contenair");
-                divContenair.append(newDiv);
+                link.append(newDiv)
+                divContenair.append(link);
+
                 
             })
         })

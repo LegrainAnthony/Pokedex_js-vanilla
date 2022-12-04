@@ -1,0 +1,215 @@
+.bug_color {
+    background-color: #92A212;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.dark_color {
+    background-color: #4F3F3D;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.dragon_color {
+    background-color:#4F60E2;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.electric_color {
+    background-color:#FAC100;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.fairy_color {
+    background-color: #EF70EF;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.fighting_color {
+    background-color: #FF8100;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.fire_color {
+    background-color:#E72324;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.flying_color {
+    background-color:#82BAEF;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.ghost_color {
+    background-color:#703F70;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.grass_color {
+    background-color:#3DA224;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.ground_color {
+    background-color:#92501B;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.ice_color {
+    background-color:#49DAFF;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.normal_color {
+    background-color:#A0A2A0;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.poison_color {
+    background-color:#923FCC;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.psychic_color {
+    background-color:#EF3F7A;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.rock_color {
+    background-color:#B0AA82;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.steel_color {
+    background-color: #60A2B9;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.water_color {
+    background-color:#2481EF;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}

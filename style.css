@@ -35,9 +35,12 @@ HEADER
 }
 
 .header__title{ 
+    
     text-align: center;
     font-size: 25px;
     font-family: 'Pokemon Solid', sans-serif;
+    
+    
 }
 
 .header__contenair__form {
@@ -56,6 +59,12 @@ HEADER
     
 }
 
+.link__color {
+    color: white;
+    text-decoration: none;
+}
+
+
 /** 
 
 MAIN
@@ -71,14 +80,45 @@ MAIN
 }
 
 .main__card_contenair {
-    border: solid 1px rgb(59, 34, 129);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 3px rgb(59, 34, 129);
+    border-radius: 15px;
+    background-color: rgb(97, 80, 80);
     text-align: center;
     margin: 10px;
-    width: 100px;
+    height: 300px;
+    width: 250px;
+    position: relative;
+    
     
 }
 
+.main__card__title {
+    text-transform: capitalize;
+    border-top: 1px solid black ;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 60%;
 
+}
+
+.main__card__image {
+    width: 200px;
+}
+
+.main__contenair__type {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
 
 /** 
 
