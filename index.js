@@ -1,18 +1,13 @@
-const divContenair = document.querySelector('#contenair');
-const inputText = document.querySelector('#fetchMax');
-const form = document.querySelector('#form');
+const divContenair = document.querySelector('#main_contenair');
 
 function hundleSubmit(event) {
     event.preventDefault();
 }
 
-function getinputValue(event){
-    fetchPokemon(event.target.value)
-    event.target.value = ''
+function addNewCard () {
+    let newDiv = document.createElement('div');
+    return newDiv
 }
-
-form.addEventListener('submit', hundleSubmit)
-inputText.addEventListener('change', getinputValue);
 
 function addParagraphe(value){
     let newP = document.createElement('p');
@@ -20,16 +15,37 @@ function addParagraphe(value){
     return newP;
 }
 
-function fetchPokemon (number) {
+function addImage(url) {
+    let newImage = document.createElement('img')
+    newImage.src = url;
+    return newImage
+}
+
+function fetchPokemon () {
     
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=${number}&offset=0`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=151&offset=0`)
     .then((response) => response.json())
     .then((data) => {
         data.results.map(pokemon => {
-            let paragraph = addParagraphe(pokemon.name);
-            paragraph.classList.add('main_title')
-            divContenair.append(paragraph);
+            
+            fetch(pokemon.url)
+            .then((response) => response.json())
+            .then((data) => {
+                
+                
+                let newDiv = addNewCard();
+                let paragraph = addParagraphe(pokemon.name);
+                let image = addImage(data.sprites.front_default);
+                
+                newDiv.append(paragraph);
+                newDiv.append(image);
+                newDiv.classList.add("main__card_contenair");
+                divContenair.append(newDiv);
+                
+            })
         })
+
     });
-    
 }
+
+fetchPokemon();
