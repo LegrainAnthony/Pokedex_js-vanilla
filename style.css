@@ -17,7 +17,21 @@ body {
 HEADER
 
 **/
-
+#header__lang_form{
+    left: 190px;
+    width: 350px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    
+}
+.heander__langPokedex{
+    background-color:rgb(116, 37, 139);
+    color:rgb(185, 185, 185);
+    width: 35px;
+}
 .header {
     border: solid 1px white;
     height: 100px;

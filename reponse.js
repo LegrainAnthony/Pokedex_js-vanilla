@@ -14,7 +14,9 @@ const contenair = document.querySelector('#contenair');
 * inséré ce text à l'intérieur du paragraph
 * puis return le resultat de la variable
 */
-
+function languagePokedex(){
+    
+}
 
 function addElement (value) {
     const newParagraph = document.createElement("p");

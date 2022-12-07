@@ -28,8 +28,9 @@ function addImage(url) {
 }
 
 function fetchPokemon () {
+    const result = document.querySelector('#header_input').value;
     
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=151&offset=0`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=${151}&offset=0`)
     .then((response) => response.json())
     .then((data) => {
         data.results.map(pokemon => {
@@ -53,7 +54,7 @@ function fetchPokemon () {
                 divTypeContenair.classList.add('main__contenair__type');
 
                 data.types.map(typeOfPokemon =>{
-                    console.log(typeOfPokemon);
+                    //console.log(typeOfPokemon);
                     let pokeType = addParagraphe(typeOfPokemon.type.name);
                     pokeType.classList.add(`${typeOfPokemon.type.name}_color`);
                     
@@ -76,3 +77,16 @@ function fetchPokemon () {
 }
 
 fetchPokemon();
+
+function langFecth(){
+    let test = FR.name;
+    let retest = parseInt(test);
+    let i =0;
+    //console.log(retest);
+                FR.onclick = () => { 
+                    fetchPokemon();
+                }
+            }
+                //fetch(`"https://pokeapi.co/api/v2/language/${langfr}/"`)
+            
+langFecth();
