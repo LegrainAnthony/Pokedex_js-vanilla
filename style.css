@@ -105,8 +105,13 @@ MAIN
     height: 300px;
     width: 250px;
     position: relative;
-    
-    
+    transition: all .2s linear 0s;
+    z-index: 0;
+}
+
+.main__card_contenair--toggle {
+    height: 600px;
+    z-index: 1;
 }
 
 .main__card__title {
@@ -122,6 +127,19 @@ MAIN
 .main__card__image {
     width: 200px;
 }
+
+.main__card_flavorText {
+    position: absolute;
+    font-size: 20px;
+    width: 200px;
+    bottom: 160px;
+    transition: all .1s linear 0s;
+}
+
+.main__card_flavorText--display {
+    display: none;
+} 
+
 
 .main__contenair__type {
     width: 100%;
